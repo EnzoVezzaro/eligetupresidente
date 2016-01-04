@@ -4180,7 +4180,7 @@ Main Components
       display: block; } }
 
 .wrapper-main {
-  max-width: 80%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   .wrapper-main::after {
@@ -4231,3 +4231,10 @@ Main Components
 
   .logo {
     display: none; } }
+.about-container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/about-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: pink; }
