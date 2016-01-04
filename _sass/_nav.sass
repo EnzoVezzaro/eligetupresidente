@@ -1,0 +1,32 @@
+.container-fluid
+  display: flex
+  justify-content: center
+  align-items: center
+  height: auto
+
+.logo
+  height: auto
+  padding: 10px
+  img
+    width: 15%
+
+
+.navbar-header
+  h3
+    display: none
+
+
+@media only screen and (max-width: 750px)
+  .container-fluid
+    display: block
+    margin: 0
+    padding: 0
+  .navbar-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    h3
+      display: block
+      padding-right: 40%
+  .logo
+    display: none

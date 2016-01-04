@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div class="nav-container" id="nav-container">
+      {% include header.html %}
+    </div>
+    <div class="wrapper-main">
+      <div class="section">
+        {% include about.html %}
+      </div>
+
+  		<div class="section">
+  			{% include votos.html %}
+  		</div>
+
+  		<div class="section">
+        {% include candidatos.html %}
+  		</div>
+
+  		<div class="section">
+  			{% include eligetupresidente2016.html %}
+  		</div>
+
+  		<div class="section">
+  			{% include encuesta.html%}
+  		</div>
+
+      <div class="section">
+        {% include contacto.html%}
+      </div>
+
+    </div>
+
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>
