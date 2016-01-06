@@ -3,9 +3,16 @@
   flex-direction: row !important
 
 .img-candidatos
-  width: 25% !important
-  background-image: url("img/danilo_img.jpg")
+  width: 25%
+  height: 207px
+  overflow: hidden !important
+
+.img-candidatos img
+  width: auto
   height: 100%
+  // background-image: url("../img/danilo_img.jpg") !important
+  // background-size: cover
+  // background-repeat: no-repeat
 
 .datos-candidatos
   width: 65% !important
@@ -15,8 +22,14 @@
   button
     margin-bottom: 20px
     margin-left: 10px
-  .mas-info-btn
-    padding: 10px 30px
+
+.datos-candidatos a
+  display: inherit
+  width: 100px
+  text-align: center
+  padding: 10px 5px
+  margin-bottom: 20px
+  margin-left: 10px
 
 .votos-candidatos
   width: 15% !important

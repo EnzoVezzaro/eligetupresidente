@@ -1,18 +1,41 @@
+{% for candidato in site.data.candidatos %}
 <div class="jumbotron candidatos-container">
+  <div class="img-candidatos">
+    <img src="{{ candidato.img }}" alt="{{ candidato.name }}" />
+  </div>
+  <div class="datos-candidatos">
+    <div class="text-candidatos">
+      <h3>{{ candidato.name }}</h3>
+      <h4>{{ candidato.profesion }}</h4>
+      <h4>Partido: {{ candidato.partido }}</h4>
+    </div>
+    <hr>
+    <a href="#" class="mas-info-btn">Mas Info</a>
+  </div>
+  <div class="votos-candidatos">
+    <h3>76</h3>
+    <h3>Votos</h3>
+    <button type="button" name="button" class="votar-btn">Votar</button>
+  </div>
+</div>
+{% endfor %}
+
+
+<!-- <div class="jumbotron candidatos-container">
   <div class="img-candidatos">
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Lic. Danilo Medina</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Lic. Danilo Medina</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
+    <h3>76</h3>
+    <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
@@ -22,16 +45,16 @@
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Luis Abinader</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Luis Abinader</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
+    <h3>76</h3>
+    <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
@@ -41,16 +64,16 @@
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Guillermo Moreno</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Guillermo Moreno</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
+    <h3>76</h3>
+    <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
@@ -60,16 +83,16 @@
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Amable Aristi</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Amable Aristi</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
+    <h3>76</h3>
+    <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
@@ -79,16 +102,16 @@
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Pelegrin Castillo</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Pelegrin Castillo</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
+    <h3>76</h3>
+    <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
@@ -98,16 +121,16 @@
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Juan Cohen Sander</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Juan Cohen Sander</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
+    <h3>76</h3>
+    <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn" >Votar</button>
   </div>
 </div>
@@ -117,16 +140,16 @@
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Saraya Aquino</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Saraya Aquino</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
+    <h3>76</h3>
+    <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
@@ -136,16 +159,16 @@
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Elias Wessin Chavez</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Elias Wessin Chavez</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
+    <h3>76</h3>
+    <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
@@ -155,16 +178,16 @@
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
-      <h3>Guillermo Moreno</h2>
-      <h4>Actual Presidente</h3>
-      <h4>De La Republica</h3>
+      <h3>Guillermo Moreno</h3>
+      <h4>Actual Presidente</h4>
+      <h4>De La Republica</h4>
     </div>
     <hr>
-    <button type="button" name="button" class="mas-info-btn">Mas Info</button>
+    <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
     <h3>76</h4>
     <h3>Votos</h4>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
-</div>
+</div> -->

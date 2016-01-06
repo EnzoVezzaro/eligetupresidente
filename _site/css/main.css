@@ -4013,7 +4013,7 @@ html {
     height: 25px; }
 
 p, h1, h2, h3, h4, h5, h6, a, button {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif !important;
   color: #898989 !important; }
 
 @media only screen and (max-width: 768px) {
@@ -4055,6 +4055,8 @@ p, h1, h2, h3, h4, h5, h6, a, button {
   box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.2);
   background-color: white !important;
   border-radius: 3px; }
+  .jumbotron h4 {
+    font-weight: lighter; }
 
 .section {
   max-width: 60%;
@@ -4070,7 +4072,37 @@ button {
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.1) !important;
   background-color: white !important;
-  border-radius: 3px; }
+  border-radius: 3px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+button:hover {
+  background-color: black !important;
+  text-decoration: none;
+  color: white !important; }
+
+.datos-candidatos a {
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: white !important;
+  border-radius: 3px;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+.datos-candidatos a:hover {
+  background-color: black !important;
+  text-decoration: none;
+  color: white !important; }
+
+.datos-candidatos a:visited {
+  text-decoration: none; }
+
+.datos-candidatos a:focus {
+  text-decoration: none; }
+
+.datos-candidatos a:active {
+  text-decoration: none; }
 
 .container-fluid {
   display: flex;
@@ -4133,8 +4165,12 @@ button {
   flex-direction: row !important; }
 
 .img-candidatos {
-  width: 25% !important;
-  background-image: url("img/danilo_img.jpg");
+  width: 25%;
+  height: 207px;
+  overflow: hidden !important; }
+
+.img-candidatos img {
+  width: auto;
   height: 100%; }
 
 .datos-candidatos {
@@ -4145,8 +4181,14 @@ button {
   .datos-candidatos button {
     margin-bottom: 20px;
     margin-left: 10px; }
-  .datos-candidatos .mas-info-btn {
-    padding: 10px 30px; }
+
+.datos-candidatos a {
+  display: inherit;
+  width: 100px;
+  text-align: center;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+  margin-left: 10px; }
 
 .votos-candidatos {
   width: 15% !important;
