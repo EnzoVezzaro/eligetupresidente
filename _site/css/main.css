@@ -4012,7 +4012,7 @@ html {
     width: 25px;
     height: 25px; }
 
-p, h1, h2, h3, h4, h5, h6, a, button {
+p, h1, h2, h3, h4, h5, h6, a, button, span {
   font-family: 'Oswald', sans-serif !important;
   color: #898989 !important; }
 
@@ -4081,29 +4081,6 @@ button:hover {
   text-decoration: none;
   color: white !important; }
 
-.datos-candidatos a {
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.1) !important;
-  background-color: white !important;
-  border-radius: 3px;
-  text-decoration: none;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out; }
-
-.datos-candidatos a:hover {
-  background-color: black !important;
-  text-decoration: none;
-  color: white !important; }
-
-.datos-candidatos a:visited {
-  text-decoration: none; }
-
-.datos-candidatos a:focus {
-  text-decoration: none; }
-
-.datos-candidatos a:active {
-  text-decoration: none; }
-
 .container-fluid {
   display: flex;
   align-items: center;
@@ -4117,8 +4094,74 @@ button:hover {
   .logo img {
     width: 50px; }
 
+#bs-example-navbar-collapse-1 ul {
+  float: left !important;
+  justify-content: center; }
+
+.dropdown {
+  float: right !important; }
+
+.dropdown button {
+  background-image: none !important; }
+
+#dropdownMenu1 {
+  margin-top: 7px;
+  margin-left: 20px; }
+
+.salir {
+  display: none; }
+
 .collapse {
   justify-content: flex-end; }
+
+.auth {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 2; }
+
+.input-signin {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-opacity: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 3; }
+
+.head-signin {
+  display: flex;
+  flex-direction: row; }
+
+.head-signin h4 {
+  width: 90%;
+  margin-left: 10%; }
+
+.head-signin i {
+  width: 10%;
+  padding-top: 10px; }
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  text-align: center; }
+
+.input-group input {
+  margin: 10px; }
+
+.input-group button {
+  margin: 15px; }
 
 .content-home {
   padding: 0px 5%; }
@@ -4188,7 +4231,28 @@ button:hover {
   text-align: center;
   padding: 10px 5px;
   margin-bottom: 20px;
-  margin-left: 10px; }
+  margin-left: 10px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: white !important;
+  border-radius: 3px;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+.datos-candidatos a:hover {
+  background-color: black !important;
+  text-decoration: none;
+  color: white !important; }
+
+.datos-candidatos a:visited {
+  text-decoration: none; }
+
+.datos-candidatos a:focus {
+  text-decoration: none; }
+
+.datos-candidatos a:active {
+  text-decoration: none; }
 
 .votos-candidatos {
   width: 15% !important;
@@ -4204,6 +4268,30 @@ button:hover {
   .votos-candidatos .votar-btn {
     padding: 5px 10px !important;
     margin-top: 20px; }
+
+.feeds {
+  padding: 20px; }
+
+#encuesta-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center; }
+
+.section-disqus {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px; }
+  .section-disqus::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.disqus {
+  width: 100%; }
+
+.disqus_thread {
+  width: 100%; }
 
 .footer-container {
   height: 175px;

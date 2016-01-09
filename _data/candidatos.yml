@@ -2,38 +2,46 @@
   profesion: Republica Dominicana
   partido: 1997
   img: img/danilo_img.jpg
+  id: danilo_votos
 
 - name: Luis Abinader
   profesion: parkr
   partido: 1997
   img: img/luis-abinader_img.jpg
+  id: luis_votos
 
 - name: Guillermo Moreno
   profesion: liufengyun
   partido: 1997
   img: img/guillermo-moreno_img.jpg
+  id: guillermo_votos
 
 - name: Amable Aristy
   profesion: Presidente De La Republica Dominicana
   partido: 1997
   img: img/amable-aristy_img.jpg
+  id: amable_votos
 
 - name: Pelegrin Castillo
   profesion: parkr
   partido: 1997
   img: img/pelegrin-castillo_img.jpg
+  id: pelegrin_votos
 
 - name: Juan Cohen Sander
   profesion: liufengyun
   partido: 1997
   img: img/juan-cohen_img.jpg
+  id: juan_votos
 
 - name: Saraya Aquino
   profesion: Presidente De La Republica Dominicana
   partido: 1997
   img: img/saraya-aquino_img.jpeg
+  id: saraya_votos
 
 - name: Elias Wessin Chavez
   profesion: parkr
   partido: 1997
   img: img/wessin_img.jpg
+  id: elias_votos
