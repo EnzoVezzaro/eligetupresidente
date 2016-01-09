@@ -13,10 +13,26 @@
   <link rel="canonical" href="http://yourdomain.com/jekyll/update/2015/12/12/welcome-to-jekyll.html">
   <link rel="alternate" type="application/rss+xml" title="Elige Tu Presidente 2016" href="http://yourdomain.com/feed.xml">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
 </head>
 
+
+  <div class="auth">
+</div>
+<div class="input-signin">
+  <div class="input-group jumbotron">
+    <div class="head-signin">
+      <h4>Registrate para votar <br>por tu proximo Presidente</h4>
+      <i class="fa fa-times close-head-signin"></i>
+    </div>
+      Email: <input id="email_name" type="email" name="fname"><br>
+      Password: <input id="email_pass" type="password" name="lname"><br>
+      <input id="submit_email" type="submit" value="Submit">
+  </div>
+</div>
 
   <body>
     <div class="nav-container" id="nav-container">
@@ -37,15 +53,20 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse main-nav navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Votos</a></li>
-        <li><a href="#">Candidatos</a></li>
-        <li><a href="#">#eligetupresidente2016</a></li>
-        <li><a href="#">Encuesta</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#home">About</a></li>
+        <li><a href="#votos">Votos</a></li>
+        <li><a href="#candidatos">Candidatos</a></li>
+        <li><a href="#twitter">#eligetupresidente2016</a></li>
+        <li><a href="#encuesta">Encuesta</a></li>
+        <li><a href="#contactos">Contacto</a></li>
       </ul>
+      <div class="dropdown">
+        <button class="btn btn-default registrate" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Registrate
+        </button>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -55,6 +76,7 @@
       <div class="section about-container">
         <div class="jumbotron home-container">
   <div class="content-home">
+    <a name="home"></a>
     <h1>About</h1>
     <p>Las elecciones generales de la República Dominicana de 2016 se celebrarán el domingo 15 de mayo de 2016 de forma simultánea en todo el territorio de ese país.
       Es la primera elección desde el año 1994 donde todas las autoridades públicas serán electas de forma simultánea,
@@ -67,12 +89,13 @@
 
   		<div class="section">
   			<div class="jumbotron home-container">
+  <a name="votos"></a>
   <div class="content-home content-votos">
     <div class="votos">
       <h2>76</h2>
     </div>
     <h2>dias para votar</h2>
-    <h1>18,500,000</h1>
+    <h1 id="total_votos">18500000</h1>
     <h2>Personas que han votado hasta ahora! Ayudanos a llegar a mas personas posible usando el tag: #eligetupresidente2016</h2>
     <hr class="devider"></hr>
   </div>
@@ -83,6 +106,7 @@
   		<div class="section">
         
 <div class="jumbotron candidatos-container">
+  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="img/danilo_img.jpg" alt="Danilo Medina" />
   </div>
@@ -96,13 +120,14 @@
     <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h3>
+    <h3 id="danilo_votos">76</h3>
     <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
 
 <div class="jumbotron candidatos-container">
+  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="img/luis-abinader_img.jpg" alt="Luis Abinader" />
   </div>
@@ -116,13 +141,14 @@
     <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h3>
+    <h3 id="luis_votos">76</h3>
     <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
 
 <div class="jumbotron candidatos-container">
+  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="img/guillermo-moreno_img.jpg" alt="Guillermo Moreno" />
   </div>
@@ -136,13 +162,14 @@
     <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h3>
+    <h3 id="guillermo_votos">76</h3>
     <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
 
 <div class="jumbotron candidatos-container">
+  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="img/amable-aristy_img.jpg" alt="Amable Aristy" />
   </div>
@@ -156,13 +183,14 @@
     <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h3>
+    <h3 id="amable_votos">76</h3>
     <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
 
 <div class="jumbotron candidatos-container">
+  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="img/pelegrin-castillo_img.jpg" alt="Pelegrin Castillo" />
   </div>
@@ -176,13 +204,14 @@
     <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h3>
+    <h3 id="pelegrin_votos">76</h3>
     <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
 
 <div class="jumbotron candidatos-container">
+  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="img/juan-cohen_img.jpg" alt="Juan Cohen Sander" />
   </div>
@@ -196,13 +225,14 @@
     <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h3>
+    <h3 id="juan_votos">76</h3>
     <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
 
 <div class="jumbotron candidatos-container">
+  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="img/saraya-aquino_img.jpeg" alt="Saraya Aquino" />
   </div>
@@ -216,13 +246,14 @@
     <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h3>
+    <h3 id="saraya_votos">76</h3>
     <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
 
 <div class="jumbotron candidatos-container">
+  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="img/wessin_img.jpg" alt="Elias Wessin Chavez" />
   </div>
@@ -236,222 +267,62 @@
     <a href="#" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3>76</h3>
+    <h3 id="elias_votos">76</h3>
     <h3>Votos</h3>
     <button type="button" name="button" class="votar-btn">Votar</button>
   </div>
 </div>
 
-
-
-<!-- <div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Lic. Danilo Medina</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h3>
-    <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn">Votar</button>
-  </div>
-</div>
-
-<div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Luis Abinader</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h3>
-    <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn">Votar</button>
-  </div>
-</div>
-
-<div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Guillermo Moreno</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h3>
-    <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn">Votar</button>
-  </div>
-</div>
-
-<div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Amable Aristi</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h3>
-    <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn">Votar</button>
-  </div>
-</div>
-
-<div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Pelegrin Castillo</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h3>
-    <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn">Votar</button>
-  </div>
-</div>
-
-<div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Juan Cohen Sander</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h3>
-    <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn" >Votar</button>
-  </div>
-</div>
-
-<div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Saraya Aquino</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h3>
-    <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn">Votar</button>
-  </div>
-</div>
-
-<div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Elias Wessin Chavez</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h3>
-    <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn">Votar</button>
-  </div>
-</div>
-
-<div class="jumbotron candidatos-container">
-  <div class="img-candidatos">
-  </div>
-  <div class="datos-candidatos">
-    <div class="text-candidatos">
-      <h3>Guillermo Moreno</h3>
-      <h4>Actual Presidente</h4>
-      <h4>De La Republica</h4>
-    </div>
-    <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
-  </div>
-  <div class="votos-candidatos">
-    <h3>76</h4>
-    <h3>Votos</h4>
-    <button type="button" name="button" class="votar-btn">Votar</button>
-  </div>
-</div> -->
 
   		</div>
 
   		<div class="section">
   			<div class="jumbotron home-container">
-  <div class="content-home">
-    <h1>About</h1>
-    <p>Las elecciones generales de la República Dominicana de 2016 se celebrarán el domingo 15 de mayo de 2016 de forma simultánea en todo el territorio de ese país.
-      Es la primera elección desde el año 1994 donde todas las autoridades públicas serán electas de forma simultánea,
-      y la primera en la historia socio-política dominicana en que todas sus autoridades serán electas de forma simultánea y directa.</p>
-    <hr class="devider"></hr>
+  <a name="eligetupresidente2016"></a>
+  <div class="feeds">
+    <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
+    <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+    <ul class="juicer-feed" data-feed-id="eligetupresidente"><h1 class="referral">#eligetupresidente2016</h1></ul>
   </div>
 </div>
 
   		</div>
 
   		<div class="section">
-  			<div class="jumbotron home-container">
-  <div class="content-home">
-    <h1>About</h1>
-    <p>Las elecciones generales de la República Dominicana de 2016 se celebrarán el domingo 15 de mayo de 2016 de forma simultánea en todo el territorio de ese país.
-      Es la primera elección desde el año 1994 donde todas las autoridades públicas serán electas de forma simultánea,
-      y la primera en la historia socio-política dominicana en que todas sus autoridades serán electas de forma simultánea y directa.</p>
-    <hr class="devider"></hr>
+  			<div class="jumbotron" id="encuesta-container">
+  <a name="encuesta"></a>
+  <div class="container-encuesta">
+    <canvas id="myChart"></canvas>
   </div>
 </div>
 
   		</div>
 
-      <div class="section">
-        <div class="jumbotron home-container">
-  <div class="content-home">
-    <h1>About</h1>
-    <p>Las elecciones generales de la República Dominicana de 2016 se celebrarán el domingo 15 de mayo de 2016 de forma simultánea en todo el territorio de ese país.
-      Es la primera elección desde el año 1994 donde todas las autoridades públicas serán electas de forma simultánea,
-      y la primera en la historia socio-política dominicana en que todas sus autoridades serán electas de forma simultánea y directa.</p>
-    <hr class="devider"></hr>
-  </div>
+      <div class="section-disqus">
+        <div class="disqus">
+  <a name="contactos"></a>
+  <div id="disqus_thread"></div>
+  <script>
+  /**
+  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+
+  s.src = '//eligetupresidente2016.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
       </div>
@@ -480,24 +351,30 @@
 </footer>
 
 
-    <!-- jquery -->
+    <!-- modernizr -->
+<script type="text/javascript" src="js/modernizr.js"></script>
+
+<!-- jquery -->
 <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
 
-<!-- modernizr -->
-<script type="text/javascript" src="js/modernizr.js"></script>
+<!-- bootstrap -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- font-awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <!-- main js -->
 <script type="text/javascript" src="js/main.js"></script>
 
-<!-- bootstrap -->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- disqus -->
+<script id="dsq-count-scr" src="//eligetupresidente2016.disqus.com/count.js" async></script>
 
 
   </body>
