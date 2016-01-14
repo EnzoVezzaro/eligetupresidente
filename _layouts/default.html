@@ -6,8 +6,13 @@
 
   {% include head.html %}
 
-  {% include auth.html %}
   <body>
+    {% include auth.html %}
+
+    {% include voted.html %}
+
+    {% include policy_terms.html %}
+
     <div class="nav-container" id="nav-container">
       {% include header.html %}
     </div>
@@ -32,8 +37,8 @@
   			{% include encuesta.html%}
   		</div>
 
-      <div class="section-disqus">
-        {% include contacto.html%}
+      <div class="section section-disqus">
+        {% include disqus.html%}
       </div>
 
     </div>
