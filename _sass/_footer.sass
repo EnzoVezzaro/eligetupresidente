@@ -1,6 +1,27 @@
-.footer-container
+.site-footer
   height: 175px
   background-color: #EAEAEA
+
+.footer-container
+  padding-top: 5%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-direction: row
+  @include outer-container(80%)
+
+.navbar-footer
+  list-style: none
+  margin: 0
+  padding: 0
+  width: 100%
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+.navbar-footer li
+  float: right
+  margin-left: 10px
 
 .logo-footer
   img

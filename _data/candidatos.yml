@@ -1,47 +1,55 @@
-- name: Danilo Medina
-  profesion: Republica Dominicana
-  partido: 1997
+- name: Danilo Medina Sánchez
+  profesion: Presidente De La Republica Dominicana
+  partido: PLD
   img: img/danilo_img.jpg
   id: danilo_votos
+  wiki: https://es.wikipedia.org/wiki/Danilo_Medina
 
-- name: Luis Abinader
-  profesion: parkr
-  partido: 1997
+- name: Luis Rodolfo Abinader Corona
+  profesion: Economista
+  partido: PRM
   img: img/luis-abinader_img.jpg
   id: luis_votos
+  wiki: https://es.wikipedia.org/wiki/Luis_Abinader
 
 - name: Guillermo Moreno
-  profesion: liufengyun
-  partido: 1997
+  profesion: Politico
+  partido: Alianza Pais
   img: img/guillermo-moreno_img.jpg
   id: guillermo_votos
+  wiki: https://es.wikipedia.org/wiki/Guillermo_Moreno_Garc%C3%ADa
 
-- name: Amable Aristy
-  profesion: Presidente De La Republica Dominicana
-  partido: 1997
+- name: Amable Aristy Castro
+  profesion: Senador
+  partido: PRSC
   img: img/amable-aristy_img.jpg
   id: amable_votos
+  wiki: https://es.wikipedia.org/wiki/Amable_Aristy
 
-- name: Pelegrin Castillo
-  profesion: parkr
-  partido: 1997
+- name: Pelegrín Horacio Castillo Semán
+  profesion: Ministro de Energía y Minas
+  partido: FNP
   img: img/pelegrin-castillo_img.jpg
   id: pelegrin_votos
+  wiki: https://es.wikipedia.org/wiki/Pelegr%C3%ADn_Castillo
 
-- name: Juan Cohen Sander
-  profesion: liufengyun
-  partido: 1997
+- name: Juan Alberto Cohen Sander
+  profesion: Parlamentario
+  partido: PNVC
   img: img/juan-cohen_img.jpg
   id: juan_votos
+  wiki: https://es.wikipedia.org/wiki/Juan_Cohen
 
 - name: Saraya Aquino
-  profesion: Presidente De La Republica Dominicana
-  partido: 1997
+  profesion: Empresaria
+  partido: PUN
   img: img/saraya-aquino_img.jpeg
   id: saraya_votos
+  wiki: https://es.wikipedia.org/wiki/Soraya_Aquino
 
 - name: Elias Wessin Chavez
-  profesion: parkr
-  partido: 1997
+  profesion: Diputado
+  partido: PQDC
   img: img/wessin_img.jpg
   id: elias_votos
+  wiki: https://es.wikipedia.org/wiki/El%C3%ADas_Wessin_Ch%C3%A1vez

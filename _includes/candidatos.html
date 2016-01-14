@@ -11,12 +11,12 @@
       <h4>Partido: {{ candidato.partido }}</h4>
     </div>
     <hr>
-    <a href="#" class="mas-info-btn">Mas Info</a>
+    <a href="{{ candidato.wiki }}" target="_blank" class="mas-info-btn">Mas Info</a>
   </div>
   <div class="votos-candidatos">
-    <h3 id="{{ candidato.id }}">76</h3>
+    <h3 id="{{ candidato.id }}">0</h3>
     <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn">Votar</button>
+    <button type="button" name="button" class="votar-btn votos-{{ candidato.id }}">Votar</button>
   </div>
 </div>
 {% endfor %}

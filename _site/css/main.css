@@ -4016,7 +4016,112 @@ p, h1, h2, h3, h4, h5, h6, a, button, span {
   font-family: 'Oswald', sans-serif !important;
   color: #898989 !important; }
 
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em;
+  width: 100%;
+  vertical-align: top; }
+
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */ }
+  .input__field:focus {
+    outline: none; }
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%; }
+
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none; }
+
+.icon {
+  color: #ddd;
+  font-size: 150%; }
+
+/* Individual styles */
+/* Minoru */
+.input__field--minoru {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 0px 2px transparent;
+  color: #eca29b;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s; }
+
+.input__label--minoru {
+  padding: 0;
+  width: 100%;
+  text-align: left; }
+  .input__label--minoru::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 4em;
+    box-shadow: 0px 0px 0px 0px;
+    color: rgba(199, 152, 157, 0.6); }
+
+.input__field--minoru:focus {
+  box-shadow: 0px 0px 0px 2px #eca29b; }
+  .input__field--minoru:focus + .input__label--minoru {
+    pointer-events: none; }
+    .input__field--minoru:focus + .input__label--minoru::after {
+      -webkit-animation: anim-shadow 0.3s forwards;
+      animation: anim-shadow 0.3s forwards; }
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 100px 50px;
+    opacity: 0; } }
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 100px 50px;
+    opacity: 0; } }
+.input__label-content--minoru {
+  padding: 0.75em 0.15em; }
+
 @media only screen and (max-width: 768px) {
+  .navbar-collapse {
+    padding: 20px 40px !important;
+    border-top: 0 !important; }
+
   .container-fluid {
     display: inline !important;
     margin: 0;
@@ -4038,7 +4143,20 @@ p, h1, h2, h3, h4, h5, h6, a, button, span {
     display: inline; }
 
   .section {
-    max-width: 100% !important; } }
+    max-width: 100% !important; }
+
+  .input-group {
+    width: 100% !important; }
+
+  .voted-in {
+    width: 100% !important; }
+
+  .close-head-signin {
+    width: 90% !important; } }
+@media only screen and (max-width: 500px) {
+  .form_signin {
+    margin: 0;
+    margin-right: 40px; } }
 .wrapper-main {
   max-width: 100%;
   margin-left: auto;
@@ -4077,9 +4195,12 @@ button {
   transition: 0.3s ease-in-out; }
 
 button:hover {
-  background-color: black !important;
+  background-color: #D9D9D9 !important;
   text-decoration: none;
-  color: white !important; }
+  color: grey !important; }
+
+button:focus {
+  outline: 0 !important; }
 
 .container-fluid {
   display: flex;
@@ -4134,34 +4255,144 @@ button:hover {
   height: 100%;
   opacity: 1;
   -webkit-opacity: 1;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3; }
+  z-index: 3;
+  -webkit-transition: 3s ease;
+  transition: 0.3s ease;
+  transform: translateY(-5000px); }
 
 .head-signin {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: center; }
 
-.head-signin h4 {
-  width: 90%;
-  margin-left: 10%; }
+.form_signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5% 20%; }
 
-.head-signin i {
-  width: 10%;
-  padding-top: 10px; }
+.close-head-signin {
+  text-align: right;
+  width: 95%;
+  margin: 10px; }
 
 .input-group {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 50%;
   text-align: center; }
 
-.input-group input {
+#submit_email {
+  width: 100%;
+  padding: 5px;
+  margin: 15px; }
+
+.policy-outter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  -webkit-transition: 3s ease;
+  transition: 0.3s ease;
+  transform: translateY(5000vh); }
+
+.policy-inner {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  overflow-y: scroll;
+  padding: 30px !important; }
+  .policy-inner p {
+    font-size: 13px !important; }
+  .policy-inner h2 {
+    text-align: center; }
+
+.policy-text section {
+  flex-direction: column; }
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none; }
+  .links h5 {
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    cursor: pointer; }
+
+.close-policy-signin {
+  text-align: right;
+  width: 95%;
   margin: 10px; }
 
-.input-group button {
-  margin: 15px; }
+.cookies {
+  display: none; }
+
+.data_collected {
+  display: none; }
+
+.escudo_dominicano_out {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.escudo_dominicano {
+  background-image: url("../img/escudo_dominicano.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  opacity: 0.5; }
+
+.voted-back {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 2; }
+
+.voted-out {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  transform: translateY(-5000px); }
+
+.voted-in {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center; }
+
+.close-voted-signin {
+  margin: 10px;
+  text-align: right; }
+
+.voted-social {
+  margin: 20px; }
 
 .content-home {
   padding: 0px 5%; }
@@ -4241,9 +4472,9 @@ button:hover {
   transition: 0.3s ease-in-out; }
 
 .datos-candidatos a:hover {
-  background-color: black !important;
+  background-color: #D9D9D9 !important;
   text-decoration: none;
-  color: white !important; }
+  color: grey !important; }
 
 .datos-candidatos a:visited {
   text-decoration: none; }
@@ -4293,9 +4524,36 @@ button:hover {
 .disqus_thread {
   width: 100%; }
 
-.footer-container {
+.site-footer {
   height: 175px;
   background-color: #EAEAEA; }
+
+.footer-container {
+  padding-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+  .footer-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.navbar-footer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.navbar-footer li {
+  float: right;
+  margin-left: 10px; }
 
 .logo-footer img {
   opacity: 0.6; }
