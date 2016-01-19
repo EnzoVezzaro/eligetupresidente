@@ -4156,7 +4156,13 @@ p, h1, h2, h3, h4, h5, h6, a, button, span {
 @media only screen and (max-width: 500px) {
   .form_signin {
     margin: 0;
-    margin-right: 40px; } }
+    margin-right: 40px; }
+
+  #encuesta-container {
+    flex-direction: column; }
+
+  .encuesta-candidatos {
+    padding-top: 50px; } }
 .wrapper-main {
   max-width: 100%;
   margin-left: auto;
@@ -4201,6 +4207,16 @@ button:hover {
 
 button:focus {
   outline: 0 !important; }
+
+.nav-container {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+.wrapper-main {
+  padding-top: 90px; }
 
 .container-fluid {
   display: flex;
@@ -4397,34 +4413,57 @@ button:focus {
 .content-home {
   padding: 0px 5%; }
   .content-home p {
-    padding: 0px 10%; }
-  .content-home h1 {
     text-align: center;
-    padding-top: 50px; }
+    padding: 0px 10%; }
+  .content-home h2 {
+    text-align: center;
+    padding: 0;
+    padding-bottom: 1%; }
   .content-home hr {
-    padding-bottom: 50px; }
+    padding-bottom: 1%; }
+  .content-home h5 {
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 4%;
+    padding-top: 0;
+    margin: 0; }
+
+.home-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin: 0; }
+  .home-logo img {
+    height: 100px;
+    opacity: 0.2;
+    color: black; }
 
 .devider {
   border-color: rgba(0, 0, 0, 0.1) !important;
   width: 100%;
   height: 1px; }
 
+.votos-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 4%; }
+
 .votos {
   border-radius: 50%;
   border: 1px solid #898989;
   height: 100px;
   width: 100px;
-  margin: 30px 40%;
   background-color: white;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center; }
-  .votos h2 {
-    font-weight: lighter;
-    font-size: 32pt;
-    padding: 0;
-    margin: 0; }
+  justify-content: center;
+  font-weight: lighter;
+  font-size: 32pt;
+  padding: 0;
+  margin: 0; }
 
 .content-votos {
   text-align: center; }
@@ -4506,7 +4545,8 @@ button:focus {
 #encuesta-container {
   display: flex !important;
   justify-content: center !important;
-  align-items: center; }
+  align-items: center;
+  padding: 10% !important; }
 
 .section-disqus {
   max-width: 80%;
@@ -4529,11 +4569,10 @@ button:focus {
   background-color: #EAEAEA; }
 
 .footer-container {
-  padding-top: 5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  padding-top: 35px;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto; }
@@ -4542,21 +4581,43 @@ button:focus {
     content: "";
     display: table; }
 
+.footer-info {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column; }
+
 .navbar-footer {
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: center; }
+
+.policy-link {
   cursor: pointer; }
 
 .navbar-footer li {
   float: right;
   margin-left: 10px; }
 
-.logo-footer img {
-  opacity: 0.6; }
+.social-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .social-footer h5 {
+    width: 80px;
+    margin-right: 8px; }
+  .social-footer i {
+    margin-left: 3px;
+    color: gray; }
+
+.logo-footer {
+  width: 50%;
+  justify-content: flex-start; }
+  .logo-footer img {
+    opacity: 0.6; }
 
 .nav-footer li a {
   color: #898989 !important; }

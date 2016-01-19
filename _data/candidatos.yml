@@ -4,6 +4,7 @@
   img: img/danilo_img.jpg
   id: danilo_votos
   wiki: https://es.wikipedia.org/wiki/Danilo_Medina
+  color: BF55EC
 
 - name: Luis Rodolfo Abinader Corona
   profesion: Economista
@@ -11,13 +12,23 @@
   img: img/luis-abinader_img.jpg
   id: luis_votos
   wiki: https://es.wikipedia.org/wiki/Luis_Abinader
+  color: 446CB3
 
-- name: Guillermo Moreno
+- name: Guillermo Moreno Garcia
   profesion: Politico
   partido: Alianza Pais
   img: img/guillermo-moreno_img.jpg
   id: guillermo_votos
   wiki: https://es.wikipedia.org/wiki/Guillermo_Moreno_Garc%C3%ADa
+  color: FDB45C
+
+- name: Minerva Josefina Tavárez Mirabal
+  profesion: Diputada
+  partido: OD
+  img: img/minou-mirabal.jpg
+  id: minerva_votos
+  wiki: https://es.wikipedia.org/wiki/Minou_Tav%C3%A1rez_Mirabal
+  color: 87D37C
 
 - name: Amable Aristy Castro
   profesion: Senador
@@ -25,6 +36,7 @@
   img: img/amable-aristy_img.jpg
   id: amable_votos
   wiki: https://es.wikipedia.org/wiki/Amable_Aristy
+  color: DB0A5B
 
 - name: Pelegrín Horacio Castillo Semán
   profesion: Ministro de Energía y Minas
@@ -32,6 +44,7 @@
   img: img/pelegrin-castillo_img.jpg
   id: pelegrin_votos
   wiki: https://es.wikipedia.org/wiki/Pelegr%C3%ADn_Castillo
+  color: 6BB9F0
 
 - name: Juan Alberto Cohen Sander
   profesion: Parlamentario
@@ -39,13 +52,15 @@
   img: img/juan-cohen_img.jpg
   id: juan_votos
   wiki: https://es.wikipedia.org/wiki/Juan_Cohen
+  color: 46BFBD
 
-- name: Saraya Aquino
+- name: Flor Soraya Aquino Campos
   profesion: Empresaria
   partido: PUN
   img: img/saraya-aquino_img.jpeg
   id: saraya_votos
   wiki: https://es.wikipedia.org/wiki/Soraya_Aquino
+  color: FDB45C
 
 - name: Elias Wessin Chavez
   profesion: Diputado
@@ -53,3 +68,4 @@
   img: img/wessin_img.jpg
   id: elias_votos
   wiki: https://es.wikipedia.org/wiki/El%C3%ADas_Wessin_Ch%C3%A1vez
+  color: BDC3C7
