@@ -1,6 +1,15 @@
 $(document).ready(function() {
   var registrationButton = $(".registrate");
 
+
+  $('.votos').countdown('2016/05/15 00:01:00')
+  .on('update.countdown', function(event) {
+    $(this).html(event.strftime('%D'));
+  })
+  .on('finish.countdown', function(event) {
+    $(this).html('0')
+      .parent().addClass('disabled');
+  });
   // policy - arrow
     $(".privacy-link").click(function(){
       privacy();
