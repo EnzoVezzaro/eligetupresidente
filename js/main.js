@@ -53,6 +53,7 @@ $(document).ready(function() {
 
   function registrate(){
     if ($(".registrate").val() == "registrate") {
+      $(".input-signin").css("display", 'flex');
       showRegistrate();
     } else {
       //console.log("go to vote");
@@ -64,6 +65,7 @@ $(document).ready(function() {
 
   function registrateBtn(){
     if ($(".registrate").val() == "registrate") {
+      $(".input-signin").css("display", 'flex');
       showRegistrate();
     } else {
       showVoted();
@@ -88,7 +90,7 @@ $(document).ready(function() {
     });
 
   function showVoted(){
-    $(".voted-out").css("display", 'flex');
+    $(".voted-out").css("display", "flex");
     $(".voted-out").css("transform", "translateY(0px)");
     $(".voted-back").fadeIn(500);
   }
@@ -130,7 +132,6 @@ $(document).ready(function() {
   });
 
   $(".registrate").click(function(){
-    $(".input-signin").css("display", 'flex');
     registrate();
   });
 
