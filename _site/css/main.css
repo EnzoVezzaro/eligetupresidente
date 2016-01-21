@@ -4029,11 +4029,8 @@ p, h1, h2, h3, h4, h5, h6, a, button, span {
   display: block;
   float: right;
   padding: 0.8em;
-  width: 60%;
   border: none;
   border-radius: 0;
-  background: #f0f0f0;
-  color: #aaa;
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-appearance: none;
@@ -4078,7 +4075,7 @@ p, h1, h2, h3, h4, h5, h6, a, button, span {
 /* Minoru */
 .input__field--minoru {
   width: 100%;
-  background: #fff;
+  background: #faffbd;
   box-shadow: 0px 0px 0px 2px transparent;
   color: #eca29b;
   -webkit-transition: box-shadow 0.3s;
