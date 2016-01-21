@@ -4385,7 +4385,8 @@ button:focus {
 .close-policy-signin {
   text-align: right;
   width: 95%;
-  margin: 10px; }
+  margin: 10px;
+  cursor: pointer; }
 
 .cookies {
   display: none; }
