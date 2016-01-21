@@ -13,6 +13,24 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="canonical" href="http://yourdomain.com/">
   <link rel="alternate" type="application/rss+xml" title="Elige Tu Presidente 2016" href="http://yourdomain.com/feed.xml">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
   <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 
@@ -167,7 +185,7 @@
     <p><b>Las elecciones generales de la República Dominicana</b> del 2016 se celebrarán el domingo 15 de mayo de forma simultánea en todo el territorio del país.
       Con esta pagina queremos probar el impacto de las redes sociales en la vida politica de la Republica Dominicana.</p>
     <hr class="devider"></hr>
-    <h5>Vota por el candidato por el cual vas a votar este <b>15 de mayo.</b></h5>
+    <h5>Vota por el candidato que vas a elegir este <b>15 de mayo.</b></h5>
   </div>
 </div>
 
@@ -232,13 +250,33 @@
 
 <div class="jumbotron candidatos-container">
   <div class="img-candidatos">
+    <img src="img/miguel-vargas_img.jpg" alt="Miguel Vargas Maldonado" />
+  </div>
+  <div class="datos-candidatos">
+    <div class="text-candidatos">
+      <h3>Miguel Vargas Maldonado</h3>
+      <h4>Presidente PLD</h4>
+      <h4>Partido: PLD</h4>
+    </div>
+    <hr>
+    <a href="https://es.wikipedia.org/wiki/Miguel_Vargas" target="_blank" class="mas-info-btn">Mas Info</a>
+  </div>
+  <div class="votos-candidatos">
+    <h3 id="miguel_votos">0</h3>
+    <h3>Votos</h3>
+    <button type="button" name="button" value="no-voted" class="votar-btn votos-miguel_votos">Votar</button>
+  </div>
+</div>
+
+<div class="jumbotron candidatos-container">
+  <div class="img-candidatos">
     <img src="img/guillermo-moreno_img.jpg" alt="Guillermo Moreno Garcia" />
   </div>
   <div class="datos-candidatos">
     <div class="text-candidatos">
       <h3>Guillermo Moreno Garcia</h3>
       <h4>Politico</h4>
-      <h4>Partido: Alianza Pais</h4>
+      <h4>Partido: ALPAIS</h4>
     </div>
     <hr>
     <a href="https://es.wikipedia.org/wiki/Guillermo_Moreno_Garc%C3%ADa" target="_blank" class="mas-info-btn">Mas Info</a>
@@ -376,9 +414,8 @@
   		<div class="section">
   			<div class="jumbotron home-container">
   <div class="feeds" id="feeds">
-    <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
-    <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-    <ul class="juicer-feed" data-feed-id="eligetupresidente"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer</a></h1></ul></div>
+    <a class="twitter-timeline" href="https://twitter.com/hashtag/eligetupresidenterd2016" data-widget-id="689915817392082944">#eligetupresidenterd2016 Tweets</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  </div>
   </div>
 </div>
 
@@ -396,6 +433,9 @@
   
     <div style="background-color: #446CB3; width: 10px; height: 10px;"></div>
     <h6>Luis Rodolfo Abinader Corona</h6>
+  
+    <div style="background-color: #C5EFF7; width: 10px; height: 10px;"></div>
+    <h6>Miguel Vargas Maldonado</h6>
   
     <div style="background-color: #FDB45C; width: 10px; height: 10px;"></div>
     <h6>Guillermo Moreno Garcia</h6>

@@ -4211,7 +4211,7 @@ button:focus {
 .nav-container {
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 5;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
@@ -4263,7 +4263,7 @@ button:focus {
   flex-direction: row;
   background-color: black;
   opacity: 0.3;
-  z-index: 2; }
+  z-index: 10; }
 
 .input-signin {
   position: fixed;
@@ -4277,7 +4277,8 @@ button:focus {
   z-index: 3;
   -webkit-transition: 3s ease;
   transition: 0.3s ease;
-  transform: translateY(-5000px); }
+  transform: translateY(-5000px);
+  z-index: 11; }
 
 .head-signin {
   display: flex;
@@ -4317,7 +4318,8 @@ button:focus {
   z-index: 3;
   -webkit-transition: 3s ease;
   transition: 0.3s ease;
-  transform: translateY(5000vh); }
+  transform: translateY(5000vh);
+  z-index: 11; }
 
 .policy-inner {
   display: flex;
@@ -4381,7 +4383,7 @@ button:focus {
   flex-direction: row;
   background-color: black;
   opacity: 0.3;
-  z-index: 2; }
+  z-index: 10; }
 
 .voted-out {
   position: fixed;
@@ -4392,10 +4394,10 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  transform: translateY(-5000px); }
+  transform: translateY(-5000px);
+  z-index: 11; }
 
 .voted-in {
   display: flex;
@@ -4540,7 +4542,9 @@ button:focus {
     margin-top: 20px; }
 
 .feeds {
-  padding: 20px; }
+  padding: 20px;
+  display: flex;
+  justify-content: center; }
 
 #encuesta-container {
   display: flex !important;

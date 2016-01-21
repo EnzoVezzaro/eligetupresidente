@@ -101,6 +101,7 @@ $(document).ready(function() {
     $(".votos-danilo_votos").val("voted");
     $(".votos-luis_votos").val("voted");
     $(".votos-guillermo_votos").val("voted");
+    $(".votos-miguel_votos").val("voted");
     $(".votos-minerva_votos").val("voted");
     $(".votos-amable_votos").val("voted");
     $(".votos-pelegrin_votos").val("voted");
@@ -204,9 +205,29 @@ $(document).ready(function() {
               totalVotos();
             });
 
+            $('.votos-miguel_votos').click(function(){
+              if ($('.votos-miguel_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("miguel");
+                hopperRef.transaction(function(votos){
+                  voted_candidatos();
+                    return (votos + 1);
+                  });
+                } else {
+                  showVoted();
+                }
+              // Attach an asynchronous callback to read the data at our posts reference
+              hopperRef.on("value", function(snapshot) {
+                //console.log(snapshot.val());
+                    $('#miguel_votos').html(snapshot.val());
+              }, function (errorObject) {
+                console.log("The read failed: " + votos.miguel);
+              });
+              totalVotos();
+            });
+
             $('.votos-minerva_votos').click(function(){
-              if ($('.votos-danilo_votos').val() == "no-voted"){
-                var hopperRef = usersRef.child("danilo");
+              if ($('.votos-minerva_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("minerva");
                 hopperRef.transaction(function(votos){
                     voted_candidatos();
                     return (votos + 1);
@@ -219,7 +240,7 @@ $(document).ready(function() {
                 //console.log(snapshot.val());
                 $('#minerva_votos').html(snapshot.val());
               }, function (errorObject) {
-                console.log("The read failed: " + votos.danilo);
+                console.log("The read failed: " + votos.minerva);
               });
               totalVotos();
             });
@@ -370,13 +391,22 @@ $(document).ready(function() {
     console.log("The read failed: " + votos.luis);
   });
 
+  var hopperRef = usersRef.child("miguel");
+  hopperRef.on("value", function(snapshot) {
+    //console.log(snapshot.val());
+    $('#miguel_votos').html(snapshot.val());
+    luis = snapshot.val();
+  }, function (errorObject) {
+    console.log("The read failed: " + votos.miguel);
+  });
+
   var hopperRef = usersRef.child("minerva");
   hopperRef.on("value", function(snapshot) {
     //console.log(snapshot.val());
     $('#minerva_votos').html(snapshot.val());
     danilo = snapshot.val();
   }, function (errorObject) {
-    console.log("The read failed: " + votos.danilo);
+    console.log("The read failed: " + votos.minerva);
   });
 
   var hopperRef = usersRef.child("guillermo");

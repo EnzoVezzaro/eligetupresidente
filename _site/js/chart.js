@@ -3,6 +3,7 @@ function chartLoad() {
   var danilo = parseInt($("#danilo_votos").text());
   var luis = parseInt($("#luis_votos").text());
   var guillermo = parseInt($("#guillermo_votos").text());
+  var miguel = parseInt($("#miguel_votos").text());
   var minerva = parseInt($("#minerva_votos").text());
   var amable = parseInt($("#amable_votos").text());
   var pelegrin = parseInt($("#pelegrin_votos").text());
@@ -27,6 +28,12 @@ function chartLoad() {
           color: "#446CB3",
           highlight: "#59ABE3",
           label: "Luis"
+      },
+      {
+          value: miguel,
+          color: "#C5EFF7",
+          highlight: "#E4F1FE",
+          label: "Miguel"
       },
       {
           value: minerva,

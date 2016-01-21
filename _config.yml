@@ -8,12 +8,9 @@
 # Site settings
 title: Elige Tu Presidente 2016
 email: enzo-vezzaro@live.it
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+description: Las elecciones generales de la República Dominicana del 2016 se celebrarán el domingo 15 de mayo de forma simultánea en todo el territorio del país. Con esta pagina queremos probar el impacto de las redes sociales en la vida politica de la Republica Dominicana.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://eligetupresidenterd.com" # the base hostname & protocol for your site
 twitter_username: vezzaro_enzo
 github_username:  EnzoVezzaro
 

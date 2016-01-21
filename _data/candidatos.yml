@@ -14,9 +14,17 @@
   wiki: https://es.wikipedia.org/wiki/Luis_Abinader
   color: 446CB3
 
+- name: Miguel Vargas Maldonado
+  profesion: Presidente PLD
+  partido: PLD
+  img: img/miguel-vargas_img.jpg
+  id: miguel_votos
+  wiki: https://es.wikipedia.org/wiki/Miguel_Vargas
+  color: C5EFF7
+
 - name: Guillermo Moreno Garcia
   profesion: Politico
-  partido: Alianza Pais
+  partido: ALPAIS
   img: img/guillermo-moreno_img.jpg
   id: guillermo_votos
   wiki: https://es.wikipedia.org/wiki/Guillermo_Moreno_Garc%C3%ADa
