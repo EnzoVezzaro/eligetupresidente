@@ -65,7 +65,7 @@ $(document).ready(function() {
       registrateBtn();
     });
 
-  $(".voted-out").click(function(){
+  $(".close-voted-signin").click(function(){
     hideVoted();
   })
 
