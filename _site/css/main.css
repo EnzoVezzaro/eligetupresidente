@@ -4160,6 +4160,30 @@ p, h1, h2, h3, h4, h5, h6, a, button, span {
 
   .encuesta-candidatos {
     padding-top: 50px; } }
+@media only screen and (max-width: 300px) {
+  .img-candidatos {
+    display: none; }
+
+  .votos-candidatos {
+    padding-left: 20%; }
+
+  .site-footer {
+    height: auto !important; }
+
+  .footer-container {
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    padding-top: 35px !important; }
+
+  .navbar-footer {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: baseline !important;
+    flex-direction: column-reverse !important; }
+    .navbar-footer li {
+      margin: 0 !important; } }
 .wrapper-main {
   max-width: 100%;
   margin-left: auto;
