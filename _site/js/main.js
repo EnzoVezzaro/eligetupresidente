@@ -79,6 +79,7 @@ $(document).ready(function() {
   })
 
   $(".policy-link").click(function(){
+    $(".policy-outter").css("display", 'flex');
       policyInClick();
     });
 
@@ -87,6 +88,7 @@ $(document).ready(function() {
     });
 
   function showVoted(){
+    $(".voted-out").css("display", 'flex');
     $(".voted-out").css("transform", "translateY(0px)");
     $(".voted-back").fadeIn(500);
   }
@@ -128,6 +130,7 @@ $(document).ready(function() {
   });
 
   $(".registrate").click(function(){
+    $(".input-signin").css("display", 'flex');
     registrate();
   });
 
