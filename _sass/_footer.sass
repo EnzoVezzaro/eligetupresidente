@@ -3,12 +3,17 @@
   background-color: #EAEAEA
 
 .footer-container
-  padding-top: 5%
   display: flex
-  justify-content: space-between
   align-items: center
   flex-direction: row
+  padding-top: 35px
   @include outer-container(80%)
+
+.footer-info
+  width: 50%
+  display: flex
+  justify-content: flex-end
+  flex-direction: column
 
 .navbar-footer
   list-style: none
@@ -17,13 +22,28 @@
   width: 100%
   justify-content: center
   align-items: center
+
+.policy-link
   cursor: pointer
 
 .navbar-footer li
   float: right
   margin-left: 10px
 
+.social-footer
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  h5
+    width: 80px
+    margin-right: 8px
+  i
+    margin-left: 3px
+    color: gray
+
 .logo-footer
+  width: 50%
+  justify-content: flex-start
   img
     opacity: 0.6
 

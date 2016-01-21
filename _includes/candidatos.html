@@ -1,6 +1,5 @@
 {% for candidato in site.data.candidatos %}
 <div class="jumbotron candidatos-container">
-  <a name="candidatos"></a>
   <div class="img-candidatos">
     <img src="{{ candidato.img }}" alt="{{ candidato.name }}" />
   </div>
@@ -16,7 +15,7 @@
   <div class="votos-candidatos">
     <h3 id="{{ candidato.id }}">0</h3>
     <h3>Votos</h3>
-    <button type="button" name="button" class="votar-btn votos-{{ candidato.id }}">Votar</button>
+    <button type="button" name="button" value="no-voted" class="votar-btn votos-{{ candidato.id }}">Votar</button>
   </div>
 </div>
 {% endfor %}

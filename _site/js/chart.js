@@ -3,6 +3,7 @@ function chartLoad() {
   var danilo = parseInt($("#danilo_votos").text());
   var luis = parseInt($("#luis_votos").text());
   var guillermo = parseInt($("#guillermo_votos").text());
+  var minerva = parseInt($("#minerva_votos").text());
   var amable = parseInt($("#amable_votos").text());
   var pelegrin = parseInt($("#pelegrin_votos").text());
   var juan = parseInt($("#juan_votos").text());
@@ -17,50 +18,56 @@ function chartLoad() {
   var data = [
       {
           value: danilo,
-          color:"#F7464A",
-          highlight: "#FF5A5E",
+          color:"#BF55EC",
+          highlight: "#BE90D4",
           label: "Danilo"
       },
       {
           value: luis,
-          color: "#46BFBD",
-          highlight: "#5AD3D1",
+          color: "#446CB3",
+          highlight: "#59ABE3",
           label: "Luis"
       },
       {
-          value: guillermo,
+          value: minerva,
           color: "#FDB45C",
           highlight: "#FFC870",
+          label: "Minerva"
+      },
+      {
+          value: guillermo,
+          color: "#87D37C",
+          highlight: "#90C695",
           label: "Guillermo"
       },
       {
           value: amable,
-          color:"#F7464A",
-          highlight: "#FF5A5E",
+          color:"#DB0A5B",
+          highlight: "#D2527F",
           label: "Amable"
       },
       {
           value: pelegrin,
-          color: "#46BFBD",
-          highlight: "#5AD3D1",
+          color: "#6BB9F0",
+          highlight: "#C5EFF7",
           label: "Pelegrin"
       },
       {
           value: juan,
-          color: "#FDB45C",
-          highlight: "#FFC870",
+          color: "#46BFBD",
+          highlight: "#5AD3D1",
           label: "Juan"
       },
       {
           value: saraya,
-          color: "#46BFBD",
-          highlight: "#5AD3D1",
+          color: "#FDB45C",
+          highlight: "#FFC870",
           label: "Saraya"
       },
       {
           value: elias,
-          color: "#FDB45C",
-          highlight: "#FFC870",
+          color: "#BDC3C7",
+          highlight: "#BDC3C7",
           label: "Elias"
       }
   ]

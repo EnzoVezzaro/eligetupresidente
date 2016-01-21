@@ -46,7 +46,7 @@ $(document).ready(function() {
     if ($(".registrate").val() == "registrate") {
       showRegistrate();
     } else {
-      console.log("go to vote");
+      //console.log("go to vote");
       $('html, body').animate({
       scrollTop: $(".candidatos-container").offset().top
       }, 1000);
@@ -97,6 +97,18 @@ $(document).ready(function() {
     $(".voted-back").fadeOut(500);
   }
 
+  function voted_candidatos(){
+    $(".votos-danilo_votos").val("voted");
+    $(".votos-luis_votos").val("voted");
+    $(".votos-guillermo_votos").val("voted");
+    $(".votos-minerva_votos").val("voted");
+    $(".votos-amable_votos").val("voted");
+    $(".votos-pelegrin_votos").val("voted");
+    $(".votos-juan_votos").val("voted");
+    $(".votos-saraya_votos").val("voted");
+    $(".votos-elias_votos").val("voted");
+  }
+
   $(".close-head-signin").click(function(){
     hideRegistrate();
   });
@@ -110,12 +122,10 @@ $(document).ready(function() {
   });
 
   // firebase
-
   var myFirebaseRef = new Firebase("https://torrid-torch-2098.firebaseio.com");
   var ref = new Firebase("https://torrid-torch-2098.firebaseio.com/web/saving-data/votos");
   var newRef = new Firebase("https://torrid-torch-2098.firebaseio.com/web/saving-data");
   var usersRef = ref.child("user");
-
 
   $("#submit_email").click(function(){
     var email_name = $("#email_name").val();
@@ -124,9 +134,11 @@ $(document).ready(function() {
     myFirebaseRef.createUser({ email: email_name , password: email_pass }, function(error, userData)
       {
       if (error) {
-        console.log("Error creating user:", error);
+        //console.log("Error creating user:", error);
+        hideRegistrate();
+        showVoted();
       } else {
-        console.log("Successfully created user account with uid:", userData.uid);
+        //console.log("Successfully created user account with uid:", userData.uid);
         ref.authWithPassword({
           email    : email_name,
           password : email_pass
@@ -145,7 +157,7 @@ $(document).ready(function() {
                 });
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
                 $('#total_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.danilo);
@@ -153,13 +165,18 @@ $(document).ready(function() {
             };
 
             $('.votos-danilo_votos').click(function(){
-              var hopperRef = usersRef.child("danilo");
-              hopperRef.transaction(function(votos){
-                  return (votos + 1);
-                });
+              if ($('.votos-danilo_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("danilo");
+                hopperRef.transaction(function(votos){
+                    voted_candidatos();
+                    return (votos + 1);
+                  });
+              } else {
+                showVoted();
+              }
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
                 $('#danilo_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.danilo);
@@ -168,13 +185,18 @@ $(document).ready(function() {
             });
 
             $('.votos-luis_votos').click(function(){
-              var hopperRef = usersRef.child("luis");
-              hopperRef.transaction(function(votos){
-                  return (votos + 1);
-                });
+              if ($('.votos-luis_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("luis");
+                hopperRef.transaction(function(votos){
+                  voted_candidatos();
+                    return (votos + 1);
+                  });
+                } else {
+                  showVoted();
+                }
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
                     $('#luis_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.luis);
@@ -182,14 +204,39 @@ $(document).ready(function() {
               totalVotos();
             });
 
-            $('.votos-guillermo_votos').click(function(){
-              var hopperRef = usersRef.child("guillermo");
-              hopperRef.transaction(function(votos){
-                  return (votos + 1);
-                });
+            $('.votos-minerva_votos').click(function(){
+              if ($('.votos-danilo_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("danilo");
+                hopperRef.transaction(function(votos){
+                    voted_candidatos();
+                    return (votos + 1);
+                  });
+              } else {
+                showVoted();
+              }
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
+                $('#minerva_votos').html(snapshot.val());
+              }, function (errorObject) {
+                console.log("The read failed: " + votos.danilo);
+              });
+              totalVotos();
+            });
+
+            $('.votos-guillermo_votos').click(function(){
+              if ($('.votos-guillermo_votos').val() == "no-voted"){
+              var hopperRef = usersRef.child("guillermo");
+              hopperRef.transaction(function(votos){
+                voted_candidatos();
+                  return (votos + 1);
+                });
+              } else {
+                showVoted();
+              }
+              // Attach an asynchronous callback to read the data at our posts reference
+              hopperRef.on("value", function(snapshot) {
+                //console.log(snapshot.val());
                     $('#guillermo_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.guillermo);
@@ -198,13 +245,18 @@ $(document).ready(function() {
             });
 
             $('.votos-amable_votos').click(function(){
+              if ($('.votos-amable_votos').val() == "no-voted"){
               var hopperRef = usersRef.child("amable");
               hopperRef.transaction(function(votos){
+                voted_candidatos();
                   return (votos + 1);
                 });
+              } else {
+                showVoted();
+              }
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
                 $('#amable_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.amable);
@@ -213,13 +265,18 @@ $(document).ready(function() {
             });
 
             $('.votos-pelegrin_votos').click(function(){
-              var hopperRef = usersRef.child("pelegrin");
-              hopperRef.transaction(function(votos){
-                  return (votos + 1);
-                });
+              if ($('.votos-pelegrin_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("pelegrin");
+                hopperRef.transaction(function(votos){
+                  voted_candidatos();
+                    return (votos + 1);
+                  });
+                } else {
+                  showVoted();
+                }
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
                     $('#pelegrin_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.pelegrin);
@@ -228,13 +285,18 @@ $(document).ready(function() {
             });
 
             $('.votos-juan_votos').click(function(){
-              var hopperRef = usersRef.child("juan");
-              hopperRef.transaction(function(votos){
-                  return (votos + 1);
-                });
+              if ($('.votos-juan_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("juan");
+                hopperRef.transaction(function(votos){
+                  voted_candidatos();
+                    return (votos + 1);
+                  });
+                } else {
+                  showVoted();
+                }
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
                     $('#juan_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.juan);
@@ -243,13 +305,18 @@ $(document).ready(function() {
             });
 
             $('.votos-saraya_votos').click(function(){
-              var hopperRef = usersRef.child("saraya");
-              hopperRef.transaction(function(votos){
-                  return (votos + 1);
-                });
+              if ($('.votos-saraya_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("saraya");
+                hopperRef.transaction(function(votos){
+                  voted_candidatos();
+                    return (votos + 1);
+                  });
+                } else {
+                  showVoted();
+                }
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
               $('#saraya_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.saraya);
@@ -258,21 +325,26 @@ $(document).ready(function() {
             });
 
             $('.votos-elias_votos').click(function(){
-              var hopperRef = usersRef.child("elias");
-              hopperRef.transaction(function(votos){
-                  return (votos + 1);
-                });
+              if ($('.votos-elias_votos').val() == "no-voted"){
+                var hopperRef = usersRef.child("elias");
+                hopperRef.transaction(function(votos){
+                  voted_candidatos();
+                    return (votos + 1);
+                  });
+                } else {
+                  showVoted();
+                }
               // Attach an asynchronous callback to read the data at our posts reference
               hopperRef.on("value", function(snapshot) {
-                console.log(snapshot.val());
+                //console.log(snapshot.val());
                 $('#elias_votos').html(snapshot.val());
               }, function (errorObject) {
                 console.log("The read failed: " + votos.elias);
               });
               totalVotos();
             });
-            console.log("Auth Ready");
-            console.log("Authenticated successfully with payload:", authData);
+            //console.log("Auth Ready");
+            //console.log("Authenticated successfully with payload:", authData);
           }
         });
       }
@@ -282,7 +354,7 @@ $(document).ready(function() {
   // display votos
   var hopperRef = usersRef.child("danilo");
   hopperRef.on("value", function(snapshot) {
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     $('#danilo_votos').html(snapshot.val());
     danilo = snapshot.val();
   }, function (errorObject) {
@@ -291,16 +363,25 @@ $(document).ready(function() {
 
   var hopperRef = usersRef.child("luis");
   hopperRef.on("value", function(snapshot) {
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     $('#luis_votos').html(snapshot.val());
     luis = snapshot.val();
   }, function (errorObject) {
     console.log("The read failed: " + votos.luis);
   });
 
+  var hopperRef = usersRef.child("minerva");
+  hopperRef.on("value", function(snapshot) {
+    //console.log(snapshot.val());
+    $('#minerva_votos').html(snapshot.val());
+    danilo = snapshot.val();
+  }, function (errorObject) {
+    console.log("The read failed: " + votos.danilo);
+  });
+
   var hopperRef = usersRef.child("guillermo");
   hopperRef.on("value", function(snapshot) {
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     $('#guillermo_votos').html(snapshot.val());
     guillermo = snapshot.val();
   }, function (errorObject) {
@@ -317,7 +398,7 @@ $(document).ready(function() {
 
   var hopperRef = usersRef.child("pelegrin");
   hopperRef.on("value", function(snapshot) {
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     $('#pelegrin_votos').html(snapshot.val());
     pelegrin = snapshot.val();
   }, function (errorObject) {
@@ -326,7 +407,7 @@ $(document).ready(function() {
 
   var hopperRef = usersRef.child("juan");
   hopperRef.on("value", function(snapshot) {
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     $('#juan_votos').html(snapshot.val());
     juan = snapshot.val();
   }, function (errorObject) {
@@ -335,7 +416,7 @@ $(document).ready(function() {
 
   var hopperRef = usersRef.child("saraya");
   hopperRef.on("value", function(snapshot) {
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     $('#saraya_votos').html(snapshot.val());
     saraya = snapshot.val();
   }, function (errorObject) {
@@ -344,7 +425,7 @@ $(document).ready(function() {
 
   var hopperRef = usersRef.child("elias");
   hopperRef.on("value", function(snapshot) {
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     $('#elias_votos').html(snapshot.val());
     elias = snapshot.val();
   }, function (errorObject) {
@@ -353,11 +434,40 @@ $(document).ready(function() {
 
   var hopperRef = usersRef.child("total_votos");
   hopperRef.on("value", function(snapshot) {
-    console.log(snapshot.val());
+    //console.log(snapshot.val());
     $('#total_votos').html(snapshot.val());
     total_votos = snapshot.val();
   }, function (errorObject) {
     console.log("The read failed: " + votos.elias);
+  });
+
+  $(window).scroll(
+    {
+        previousTop: 0
+    },
+    function () {
+    var currentTop = $(window).scrollTop();
+    if (currentTop < this.previousTop) {
+        $(".nav-container").css("transform", "translateY(0px)");
+    } else {
+      $(".nav-container").css("transform", "translateY(-200px)");
+    }
+    this.previousTop = currentTop;
+  });
+
+    $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
   });
 
 });

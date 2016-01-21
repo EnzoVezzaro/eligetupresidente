@@ -1,6 +1,11 @@
 <div class="jumbotron" id="encuesta-container">
-  <a name="encuesta"></a>
   <div class="container-encuesta">
     <canvas id="myChart"></canvas>
+  </div>
+  <div class="encuesta-candidatos">
+  {% for candidato in site.data.candidatos %}
+    <div style="background-color: #{{ candidato.color }}; width: 10px; height: 10px;"></div>
+    <h6>{{ candidato.name }}</h6>
+  {% endfor %}
   </div>
 </div>
