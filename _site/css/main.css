@@ -4159,7 +4159,21 @@ p, h1, h2, h3, h4, h5, h6, a, button, span {
     flex-direction: column; }
 
   .encuesta-candidatos {
-    padding-top: 50px; } }
+    padding-top: 50px; }
+
+  .img-candidatos {
+    height: 250px !important; } }
+@media only screen and (max-width: 400px) {
+  .site-footer {
+    height: auto !important; }
+
+  .navbar-footer {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-direction: column-reverse !important; }
+    .navbar-footer li {
+      margin: 0 !important; } }
 @media only screen and (max-width: 300px) {
   .img-candidatos {
     display: none; }
