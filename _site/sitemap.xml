@@ -10,5 +10,10 @@
   <loc>http://eligetupresidenterd.com/</loc>
   <lastmod>2016-01-22T17:28:32+00:00</lastmod>
   <changefreq>weekly</changefreq>
+  <xhtml:link
+             rel="alternate"
+             hreflang="es"
+             href="http://eligetupresidenterd.com"
+             />
 </url>
 </urlset>
