@@ -1,8 +1,7 @@
 $(document).ready(function() {
   var registrationButton = $(".registrate");
 
-
-  $('.votos').countdown('2016/05/15 00:01:00')
+  $('.votos-dias').countdown('2016/05/16 00:00', "America/Sao_Paulo")
   .on('update.countdown', function(event) {
     $(this).html(event.strftime('%D'));
   })
@@ -10,6 +9,7 @@ $(document).ready(function() {
     $(this).html('0')
       .parent().addClass('disabled');
   });
+
   // policy - arrow
     $(".privacy-link").click(function(){
       privacy();
