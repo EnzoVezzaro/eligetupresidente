@@ -4454,7 +4454,8 @@ button:focus {
   .content-home p {
     text-align: center;
     padding: 0px 10%; }
-  .content-home h2 {
+  .content-home h1 {
+    font-size: 30px !important;
     text-align: center;
     padding: 0;
     padding-bottom: 1%; }
@@ -4506,7 +4507,7 @@ button:focus {
 
 .content-votos {
   text-align: center; }
-  .content-votos h1 {
+  .content-votos h3 {
     font-weight: bold;
     font-size: 32pt;
     padding: 0;
